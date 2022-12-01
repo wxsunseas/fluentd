@@ -1,4 +1,5 @@
-#docker buildx build --platform linux/x86_64 -t fluentd .            
+#mac docker buildx build --platform linux/x86_64 -t fluentd .            
+#其他 docker build -t fluent .
 FROM fluent/fluentd:v1.15-debian-1
 
 # Use root account to use apt
@@ -21,7 +22,7 @@ RUN buildDeps="sudo make gcc g++ libc-dev" \
  && rm -rf /var/lib/apt/lists/* \
  && rm -rf /tmp/* /var/tmp/* /usr/lib/ruby/gems/*/cache/*.gem
 
-COPY ./sql-mongo/fluent.conf /fluentd/etc/
+COPY ./conf/fluent.conf /fluentd/etc/
 # COPY entrypoint.sh /bin/
 
 USER fluent
