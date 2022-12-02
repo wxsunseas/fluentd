@@ -25,7 +25,16 @@ cr.fluentbit.io/fluent/fluent-bit:2.0.5 \
 #运行fluentd
 docker run -itd --name fluentd --network fluent -p 9880:9880 -v $PWD/fluentbit/docker1:/fluentd/etc  fluent/fluentd 
 
-docker run -itd --name fluentd --network fluent -p 9880:9880 -v $PWD/fluentd/sql-mongo:/fluentd/etc  fluentd 
+docker run -itd --name fluentd --network fluent -p 9880:9880 -v /usr/local/fluent/fluentd:/fluentd/etc  fluentd 
+
+
+
+docker run -itd  --name fluentbit \
+    -v /usr/local/fluent/fluentbit:/usr/local/fluent/fluentbit  \
+    -v /inverse/logs:/inverse/logs  \
+    cr.fluentbit.io/fluent/fluent-bit:2.0.5 \
+    -c /usr/local/fluent/fluentbit/fluent-bit.conf 
+
 
 
 #安装mongdb
