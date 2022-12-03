@@ -1,0 +1,108 @@
+NAMESPACE            LAST SEEN   TYPE      REASON              OBJECT                                          MESSAGE
+cattle-system        2m24s       Warning   BackOff             pod/cattle-cluster-agent-687f659995-l97v2       Back-off restarting failed container
+team-smartcontract   7s          Normal    BackOff             pod/bidb-react-7967859fd5-hplrz                 Back-off pulling image "harbor-core.olivedigital.tech/demo/httpbin:v1.0"
+team-smartcontract   2m18s       Normal    BackOff             pod/mytest                                      Back-off pulling image "harbor-core.olivedigital.tech/smartcontract/bibd-web:v1.0"
+jenkins-bot          59m         Normal    Scheduled           pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Successfully assigned jenkins-bot/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t to devk8sworker02
+jenkins-bot          59m         Normal    Started             pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Started container kubectl
+jenkins-bot          59m         Normal    Pulled              pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Container image "maven:3.8.5-jdk-8" already present on machine
+jenkins-bot          59m         Normal    Created             pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Created container maven
+jenkins-bot          59m         Normal    Started             pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Started container maven
+jenkins-bot          59m         Normal    Pulled              pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Container image "harbor-core.olivedigital.tech/library/sonar-scanner-with-maven:4.7" already present on machine
+jenkins-bot          59m         Normal    Pulled              pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Container image "bitnami/kubectl:1.24" already present on machine
+jenkins-bot          59m         Normal    Created             pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Created container kubectl
+jenkins-bot          59m         Normal    Started             pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Started container sonar-scanner-cli
+jenkins-bot          59m         Normal    Created             pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Created container kaniko
+jenkins-bot          59m         Normal    Pulled              pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Container image "gcr.io/kaniko-project/executor:v1.5.1-debug" already present on machine
+jenkins-bot          59m         Normal    Pulled              pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Container image "jenkins/inbound-agent:4.11-1-jdk11" already present on machine
+jenkins-bot          59m         Normal    Created             pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Created container jnlp
+jenkins-bot          59m         Normal    Started             pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Started container jnlp
+jenkins-bot          59m         Normal    Created             pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Created container sonar-scanner-cli
+jenkins-bot          59m         Normal    Started             pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Started container kaniko
+team-nova            58m         Normal    ScalingReplicaSet   deployment/atwcoreis                            Scaled up replica set atwcoreis-c79bb7bd7 to 1
+team-nova            58m         Normal    SuccessfulCreate    replicaset/atwcoreis-c79bb7bd7                  Created pod: atwcoreis-c79bb7bd7-zk5p8
+team-nova            58m         Normal    Scheduled           pod/atwcoreis-c79bb7bd7-zk5p8                   Successfully assigned team-nova/atwcoreis-c79bb7bd7-zk5p8 to devk8sworker02
+jenkins-bot          58m         Normal    Killing             pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Stopping container sonar-scanner-cli
+jenkins-bot          58m         Normal    Killing             pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Stopping container kubectl
+jenkins-bot          58m         Normal    Killing             pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Stopping container jnlp
+jenkins-bot          58m         Normal    Killing             pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Stopping container maven
+team-nova            58m         Normal    Started             pod/atwcoreis-c79bb7bd7-zk5p8                   Started container mount-skywalking-agent
+team-nova            58m         Normal    Created             pod/atwcoreis-c79bb7bd7-zk5p8                   Created container mount-skywalking-agent
+team-nova            58m         Normal    Pulled              pod/atwcoreis-c79bb7bd7-zk5p8                   Container image "apache/skywalking-java-agent:8.9.0-java8" already present on machine
+jenkins-bot          58m         Normal    Killing             pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Stopping container kaniko
+team-nova            58m         Normal    Pulling             pod/atwcoreis-c79bb7bd7-zk5p8                   Pulling image "harbor-core.olivedigital.tech/nova/atwcoreis:beta-c700aa9"
+team-nova            58m         Normal    Created             pod/atwcoreis-c79bb7bd7-zk5p8                   Created container atwcoreis
+team-nova            58m         Normal    Pulled              pod/atwcoreis-c79bb7bd7-zk5p8                   Successfully pulled image "harbor-core.olivedigital.tech/nova/atwcoreis:beta-c700aa9" in 2.180762436s
+team-nova            58m         Normal    Killing             pod/atwcoreis-6988f7947d-n67hh                  Stopping container atwcoreis
+team-nova            58m         Normal    SuccessfulDelete    replicaset/atwcoreis-6988f7947d                 Deleted pod: atwcoreis-6988f7947d-n67hh
+team-nova            58m         Normal    Started             pod/atwcoreis-c79bb7bd7-zk5p8                   Started container atwcoreis
+team-nova            58m         Normal    ScalingReplicaSet   deployment/atwcoreis                            Scaled down replica set atwcoreis-6988f7947d to 0
+team-smartcontract   27m         Normal    Pulling             pod/mytest                                      Pulling image "harbor-core.olivedigital.tech/smartcontract/bibd-web:v1.0"
+team-smartcontract   25m         Normal    Pulling             pod/bidb-react-7967859fd5-hplrz                 Pulling image "harbor-core.olivedigital.tech/demo/httpbin:v1.0"
+jenkins-bot          28m         Normal    Scheduled           pod/team-nova-cbreport-23-5kj91-cpjth-15n5n     Successfully assigned jenkins-bot/team-nova-cbreport-23-5kj91-cpjth-15n5n to devk8sworker02
+jenkins-bot          28m         Normal    Created             pod/team-nova-cbreport-23-5kj91-cpjth-15n5n     Created container maven
+jenkins-bot          28m         Normal    Started             pod/team-nova-cbreport-23-5kj91-cpjth-15n5n     Started container maven
+jenkins-bot          28m         Normal    Created             pod/team-nova-cbreport-23-5kj91-cpjth-15n5n     Created container sonar-scanner-cli
+jenkins-bot          28m         Normal    Created             pod/team-nova-cbreport-23-5kj91-cpjth-15n5n     Created container kubectl
+jenkins-bot          28m         Normal    Pulled              pod/team-nova-cbreport-23-5kj91-cpjth-15n5n     Container image "bitnami/kubectl:1.24" already present on machine
+jenkins-bot          28m         Normal    Pulled              pod/team-nova-cbreport-23-5kj91-cpjth-15n5n     Container image "harbor-core.olivedigital.tech/library/sonar-scanner-with-maven:4.7" already present on machine
+jenkins-bot          28m         Normal    Started             pod/team-nova-cbreport-23-5kj91-cpjth-15n5n     Started container kubectl
+jenkins-bot          28m         Normal    Pulled              pod/team-nova-cbreport-23-5kj91-cpjth-15n5n     Container image "maven:3.8.5-jdk-8" already present on machine
+jenkins-bot          28m         Normal    Created             pod/team-nova-cbreport-23-5kj91-cpjth-15n5n     Created container jnlp
+jenkins-bot          28m         Normal    Pulled              pod/team-nova-cbreport-23-5kj91-cpjth-15n5n     Container image "gcr.io/kaniko-project/executor:v1.5.1-debug" already present on machine
+jenkins-bot          28m         Normal    Started             pod/team-nova-cbreport-23-5kj91-cpjth-15n5n     Started container jnlp
+jenkins-bot          28m         Normal    Started             pod/team-nova-cbreport-23-5kj91-cpjth-15n5n     Started container kaniko
+jenkins-bot          28m         Normal    Started             pod/team-nova-cbreport-23-5kj91-cpjth-15n5n     Started container sonar-scanner-cli
+jenkins-bot          28m         Normal    Created             pod/team-nova-cbreport-23-5kj91-cpjth-15n5n     Created container kaniko
+jenkins-bot          28m         Normal    Pulled              pod/team-nova-cbreport-23-5kj91-cpjth-15n5n     Container image "jenkins/inbound-agent:4.11-1-jdk11" already present on machine
+team-nova            27m         Normal    SuccessfulCreate    replicaset/bibdcbreport-5c9bc86cc6              Created pod: bibdcbreport-5c9bc86cc6-9z9db
+team-nova            27m         Normal    Scheduled           pod/bibdcbreport-5c9bc86cc6-9z9db               Successfully assigned team-nova/bibdcbreport-5c9bc86cc6-9z9db to devk8sworker05
+team-nova            27m         Normal    ScalingReplicaSet   deployment/bibdcbreport                         Scaled up replica set bibdcbreport-5c9bc86cc6 to 1
+team-nova            27m         Normal    Created             pod/bibdcbreport-5c9bc86cc6-9z9db               Created container mount-skywalking-agent
+jenkins-bot          27m         Normal    Killing             pod/team-nova-cbreport-23-5kj91-cpjth-15n5n     Stopping container kubectl
+team-nova            27m         Normal    Pulled              pod/bibdcbreport-5c9bc86cc6-9z9db               Container image "apache/skywalking-java-agent:8.9.0-java8" already present on machine
+jenkins-bot          27m         Normal    Killing             pod/team-nova-cbreport-23-5kj91-cpjth-15n5n     Stopping container jnlp
+jenkins-bot          27m         Normal    Killing             pod/team-nova-cbreport-23-5kj91-cpjth-15n5n     Stopping container sonar-scanner-cli
+jenkins-bot          27m         Normal    Killing             pod/team-nova-cbreport-23-5kj91-cpjth-15n5n     Stopping container maven
+jenkins-bot          27m         Normal    Killing             pod/team-nova-cbreport-23-5kj91-cpjth-15n5n     Stopping container kaniko
+team-nova            27m         Normal    Pulling             pod/bibdcbreport-5c9bc86cc6-9z9db               Pulling image "harbor-core.olivedigital.tech/nova/bibdcbreport:beta-ac374a7"
+team-nova            27m         Normal    Started             pod/bibdcbreport-5c9bc86cc6-9z9db               Started container mount-skywalking-agent
+team-nova            27m         Normal    Pulled              pod/bibdcbreport-5c9bc86cc6-9z9db               Successfully pulled image "harbor-core.olivedigital.tech/nova/bibdcbreport:beta-ac374a7" in 1.918689195s
+team-nova            27m         Normal    Started             pod/bibdcbreport-5c9bc86cc6-9z9db               Started container bibdcbreport
+team-nova            27m         Normal    Created             pod/bibdcbreport-5c9bc86cc6-9z9db               Created container bibdcbreport
+team-nova            27m         Normal    ScalingReplicaSet   deployment/bibdcbreport                         Scaled down replica set bibdcbreport-7d97dcb976 to 0
+team-nova            27m         Normal    SuccessfulDelete    replicaset/bibdcbreport-7d97dcb976              Deleted pod: bibdcbreport-7d97dcb976-fwfz5
+team-nova            27m         Normal    Killing             pod/bibdcbreport-7d97dcb976-fwfz5               Stopping container bibdcbreport
+jenkins-bot          13m         Normal    Scheduled           pod/team-nova-atw-coreis-41-126wk-3fr8w-jxh7w   Successfully assigned jenkins-bot/team-nova-atw-coreis-41-126wk-3fr8w-jxh7w to devk8sworker02
+jenkins-bot          13m         Normal    Created             pod/team-nova-atw-coreis-41-126wk-3fr8w-jxh7w   Created container kubectl
+jenkins-bot          13m         Normal    Pulled              pod/team-nova-atw-coreis-41-126wk-3fr8w-jxh7w   Container image "bitnami/kubectl:1.24" already present on machine
+jenkins-bot          13m         Normal    Created             pod/team-nova-atw-coreis-41-126wk-3fr8w-jxh7w   Created container sonar-scanner-cli
+jenkins-bot          13m         Normal    Pulled              pod/team-nova-atw-coreis-41-126wk-3fr8w-jxh7w   Container image "harbor-core.olivedigital.tech/library/sonar-scanner-with-maven:4.7" already present on machine
+jenkins-bot          13m         Normal    Started             pod/team-nova-atw-coreis-41-126wk-3fr8w-jxh7w   Started container maven
+jenkins-bot          13m         Normal    Started             pod/team-nova-atw-coreis-41-126wk-3fr8w-jxh7w   Started container sonar-scanner-cli
+jenkins-bot          13m         Normal    Created             pod/team-nova-atw-coreis-41-126wk-3fr8w-jxh7w   Created container maven
+jenkins-bot          13m         Normal    Started             pod/team-nova-atw-coreis-41-126wk-3fr8w-jxh7w   Started container jnlp
+jenkins-bot          13m         Normal    Created             pod/team-nova-atw-coreis-41-126wk-3fr8w-jxh7w   Created container jnlp
+jenkins-bot          13m         Normal    Pulled              pod/team-nova-atw-coreis-41-126wk-3fr8w-jxh7w   Container image "jenkins/inbound-agent:4.11-1-jdk11" already present on machine
+jenkins-bot          13m         Normal    Started             pod/team-nova-atw-coreis-41-126wk-3fr8w-jxh7w   Started container kubectl
+jenkins-bot          13m         Normal    Started             pod/team-nova-atw-coreis-41-126wk-3fr8w-jxh7w   Started container kaniko
+jenkins-bot          13m         Normal    Pulled              pod/team-nova-atw-coreis-41-126wk-3fr8w-jxh7w   Container image "gcr.io/kaniko-project/executor:v1.5.1-debug" already present on machine
+jenkins-bot          13m         Normal    Pulled              pod/team-nova-atw-coreis-41-126wk-3fr8w-jxh7w   Container image "maven:3.8.5-jdk-8" already present on machine
+jenkins-bot          13m         Normal    Created             pod/team-nova-atw-coreis-41-126wk-3fr8w-jxh7w   Created container kaniko
+team-nova            12m         Normal    Scheduled           pod/atwcoreis-686ddd4fc9-5wgxz                  Successfully assigned team-nova/atwcoreis-686ddd4fc9-5wgxz to devk8sworker05
+team-nova            12m         Normal    ScalingReplicaSet   deployment/atwcoreis                            Scaled up replica set atwcoreis-686ddd4fc9 to 1
+team-nova            12m         Normal    SuccessfulCreate    replicaset/atwcoreis-686ddd4fc9                 Created pod: atwcoreis-686ddd4fc9-5wgxz
+team-nova            12m         Normal    Created             pod/atwcoreis-686ddd4fc9-5wgxz                  Created container mount-skywalking-agent
+jenkins-bot          12m         Normal    Killing             pod/team-nova-atw-coreis-41-126wk-3fr8w-jxh7w   Stopping container kubectl
+jenkins-bot          12m         Normal    Killing             pod/team-nova-atw-coreis-41-126wk-3fr8w-jxh7w   Stopping container sonar-scanner-cli
+jenkins-bot          12m         Normal    Killing             pod/team-nova-atw-coreis-41-126wk-3fr8w-jxh7w   Stopping container maven
+jenkins-bot          12m         Normal    Killing             pod/team-nova-atw-coreis-41-126wk-3fr8w-jxh7w   Stopping container kaniko
+team-nova            12m         Normal    Pulled              pod/atwcoreis-686ddd4fc9-5wgxz                  Container image "apache/skywalking-java-agent:8.9.0-java8" already present on machine
+jenkins-bot          12m         Normal    Killing             pod/team-nova-atw-coreis-41-126wk-3fr8w-jxh7w   Stopping container jnlp
+team-nova            12m         Normal    Started             pod/atwcoreis-686ddd4fc9-5wgxz                  Started container mount-skywalking-agent
+team-nova            12m         Normal    Pulling             pod/atwcoreis-686ddd4fc9-5wgxz                  Pulling image "harbor-core.olivedigital.tech/nova/atwcoreis:beta-abe4609"
+team-nova            11m         Normal    Pulled              pod/atwcoreis-686ddd4fc9-5wgxz                  Successfully pulled image "harbor-core.olivedigital.tech/nova/atwcoreis:beta-abe4609" in 2.274134076s
+team-nova            11m         Normal    Started             pod/atwcoreis-686ddd4fc9-5wgxz                  Started container atwcoreis
+team-nova            11m         Normal    Created             pod/atwcoreis-686ddd4fc9-5wgxz                  Created container atwcoreis
+team-nova            11m         Normal    Killing             pod/atwcoreis-c79bb7bd7-zk5p8                   Stopping container atwcoreis
+team-nova            11m         Normal    SuccessfulDelete    replicaset/atwcoreis-c79bb7bd7                  Deleted pod: atwcoreis-c79bb7bd7-zk5p8
+team-nova            11m         Normal    ScalingReplicaSet   deployment/atwcoreis                            Scaled down replica set atwcoreis-c79bb7bd7 to 0

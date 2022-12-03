@@ -1,0 +1,71 @@
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2022-05-26 01:08:12
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2022-05-26 01:08:12 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 4096
+2022-05-26 01:19:17 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 79
+2022-05-26 01:27:29 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 27020
+2022-05-26 01:32:00 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 92
+2022-05-26 01:43:25 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 26790
+2022-05-26 01:45:58 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 110
+2022-05-26 01:48:03 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 2111
+2022-05-26 01:49:10 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 65
+2022-05-26 01:54:45 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 83
+2022-05-26 01:57:45 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 74
+2022-05-26 01:59:50 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 26
+2022-05-26 02:03:25 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 68
+2022-05-26 02:05:33 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 29
+2022-05-26 02:06:32 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 52
+2022-05-26 02:08:49 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 52
+2022-05-26 02:20:46 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 26914
+2022-05-26 02:22:12 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 109
+2022-05-26 02:22:26 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 47
+2022-05-26 02:23:00 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 50
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2022-05-26 02:43:40
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2022-05-26 02:43:39 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 3843
+2022-05-26 02:46:07 10.1.22.32 POST /PrintService.asmx - 9812 - 10.1.21.81 - - 200 0 0 906
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2022-05-26 06:29:38
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2022-05-26 06:29:38 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 31884
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2022-05-26 06:47:52
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2022-05-26 06:47:52 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 27116
+2022-05-26 06:52:34 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 79
+2022-05-26 06:52:51 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 329
+2022-05-26 07:01:28 10.1.22.32 POST /PrintService.asmx - 9812 - 10.1.21.81 - - 200 0 0 849
+2022-05-26 07:15:49 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 250
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2022-05-26 07:42:25
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2022-05-26 07:42:25 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 31735
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2022-05-26 07:58:24
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2022-05-26 07:58:24 10.1.22.32 POST /PrintService.asmx - 9812 - 10.1.21.81 - - 200 0 0 838
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2022-05-26 08:24:36
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2022-05-26 08:24:36 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 31884
+2022-05-26 08:31:11 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 95
+2022-05-26 08:33:49 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 67
+2022-05-26 08:44:04 10.1.22.32 POST /PrintService.asmx - 9812 - 10.1.21.81 - - 200 0 0 27582
+2022-05-26 08:47:06 10.1.22.32 POST /PrintService.asmx - 9812 - 10.1.21.81 - - 200 0 0 58
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2022-05-26 09:48:11
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2022-05-26 09:48:11 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 31999
+2022-05-26 09:52:17 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 102
+2022-05-26 09:56:46 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 85
+2022-05-26 09:59:58 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 166
+2022-05-26 10:00:57 10.1.22.32 POST /MailMergeService.asmx - 9812 - 10.1.21.81 - - 200 0 0 63
