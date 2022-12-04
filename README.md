@@ -11,7 +11,8 @@
 
 二、fluentbit
 1. 编写[fluent-bit.conf](./fluentbit/local/fluent-bit.conf),以及对应的[Parser](./fluentbit/local/parsers.conf)
-2. 启动fluentbit
+2. 需要注意的是第一步，固定字段，比如系统名称，ip等需要按实际情况修改
+3. 启动fluentbit
 ```
     docker run -itd  --name fbt-ftg \
     -v /fluentbitconfPath:/usr/local/fluent/fluentbit  \
@@ -19,4 +20,4 @@
     cr.fluentbit.io/fluent/fluent-bit:2.0.5 \
     -c /usr/local/fluent/fluentbit/fluent-bit.conf 
 ```
-3. 启动对应的应用开始写入日志即可
+4. 启动对应的应用开始写入日志即可
