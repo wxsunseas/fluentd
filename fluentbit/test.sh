@@ -50,3 +50,28 @@ docker run -itd  --name application \
     -v /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime \
     cr.fluentbit.io/fluent/fluent-bit:2.0.5 \
     -c /usr/local/fluent/fluentbit/fluent-bit.conf 
+
+docker run -itd  --name integration \
+    --network fluent \
+    -v /Users/lijinhai/Documents/project/fluentd/fluentbit/iislog-integration:/usr/local/fluent/fluentbit  \
+    -v /Users/lijinhai/Documents/project/fluentd/logs:/application/logs  \
+    -v /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime \
+    cr.fluentbit.io/fluent/fluent-bit:2.0.5 \
+    -c /usr/local/fluent/fluentbit/fluent-bit.conf 
+
+docker run -it  --name ultron \
+    --network fluent \
+    -v /Users/lijinhai/Documents/project/fluentd/fluentbit/iislog-ultron:/usr/local/fluent/fluentbit  \
+    -v /Users/lijinhai/Documents/project/fluentd/logs:/application/logs  \
+    -v /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime \
+    cr.fluentbit.io/fluent/fluent-bit:2.0.5 \
+    -c /usr/local/fluent/fluentbit/fluent-bit.conf 
+
+
+docker run -it  --name iislog \
+    --network fluent \
+    -v /Users/lijinhai/Documents/project/fluentd/fluentbit/iislog:/usr/local/fluent/fluentbit  \
+    -v /Users/lijinhai/Documents/project/fluentd/logs:/application/logs  \
+    -v /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime \
+    cr.fluentbit.io/fluent/fluent-bit:2.0.5 \
+    -c /usr/local/fluent/fluentbit/fluent-bit.conf 
