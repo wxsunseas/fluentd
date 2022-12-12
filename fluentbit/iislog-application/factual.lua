@@ -17,10 +17,10 @@ function getUpdateTime(tag, timestamp, record)
     newRecord = record
     mather = "%|[0-9-]+ [0-9:]+.+[0-9][0-9][0-9]"
     if string.match(record["log"], mather) ~= nil then
-        newRecord["lo88"] = string.match(string.match(record["log"], mather), "[0-9-]+ [0-9:]+.+[0-9][0-9][0-9]")
+        newRecord["lo07"] = string.match(string.match(record["log"], mather), "[0-9-]+ [0-9:]+.+[0-9][0-9][0-9]")
         return 1, timestamp, newRecord
     else
-        newRecord["lo88"] = 'None'
+        newRecord["lo07"] = 'None'
         return 1, timestamp, newRecord
     end
 end

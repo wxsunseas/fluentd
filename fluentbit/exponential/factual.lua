@@ -16,10 +16,10 @@ end
 function getUpdateTime(tag, timestamp, record) 
     newRecord = record
     if string.match(record["log"], "([0-9-]+ [:0-9.]+)") ~= nil then
-        newRecord["lo88"] = string.match(record["log"], "([0-9-]+ [:0-9.]+)")
+        newRecord["lo07"] = string.match(record["log"], "([0-9-]+ [:0-9.]+)")
         return 1, timestamp, newRecord
     else
-        newRecord["lo88"] = 'None'
+        newRecord["lo07"] = 'None'
         return 1, timestamp, newRecord
     end
 end
