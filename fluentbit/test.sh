@@ -84,3 +84,14 @@ docker run -it  --name iislog \
     -v /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime \
     cr.fluentbit.io/fluent/fluent-bit:2.0.5 \
     -c /usr/local/fluent/fluentbit/fluent-bit.conf 
+
+
+
+
+docker run -itd  --name kfk-k8s \
+    --network fluent \
+    -v /Users/lijinhai/Documents/project/fluentd/fluentbit/k8s-kfk:/usr/local/fluent/fluentbit  \
+    -v /Users/lijinhai/Documents/project/fluentd/logs:/factal/logs  \
+    -v /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime \
+    cr.fluentbit.io/fluent/fluent-bit:2.0.5 \
+    -c /usr/local/fluent/fluentbit/fluent-bit.conf 
