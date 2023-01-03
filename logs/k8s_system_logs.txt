@@ -17,7 +17,7 @@ jenkins-bot          59m         Normal    Pulled              pod/team-nova-atw
 jenkins-bot          59m         Normal    Created             pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Created container jnlp
 jenkins-bot          59m         Normal    Started             pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Started container jnlp
 jenkins-bot          59m         Normal    Created             pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Created container sonar-scanner-cli
-jenkins-bot          59m         Normal    Started             pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Started container kaniko
+jenkins-bot          59m         Normal    Started             pod/team-nova-atw-coreis-40-s3wc0-hrqrh-nbc2t   Started contaœiner kaniko
 team-nova            58m         Normal    ScalingReplicaSet   deployment/atwcoreis                            Scaled up replica set atwcoreis-c79bb7bd7 to 1
 team-nova            58m         Normal    SuccessfulCreate    replicaset/atwcoreis-c79bb7bd7                  Created pod: atwcoreis-c79bb7bd7-zk5p8
 team-nova            58m         Normal    Scheduled           pod/atwcoreis-c79bb7bd7-zk5p8                   Successfully assigned team-nova/atwcoreis-c79bb7bd7-zk5p8 to devk8sworker02

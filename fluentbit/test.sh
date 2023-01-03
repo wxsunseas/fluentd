@@ -101,8 +101,8 @@ docker run -itd  --name kfk-k8s \
 
 docker run -itd  --name k8s \
     --network fluent \
-    -v /fluentd/fluentbit/k8s:/usr/local/fluent/fluentbit  \
-    -v /fluentd/logs:/logs  \
+    -v /fluentd/fluentbit/inverse:/usr/local/fluent/fluentbit  \
+    -v /inverse/logs:/inverse/logs  \
     -v /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime \
     cr.fluentbit.io/fluent/fluent-bit:2.0.5 \
     -c /usr/local/fluent/fluentbit/fluent-bit.conf

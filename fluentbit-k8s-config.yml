@@ -1,0 +1,153 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fluent-bit-config
+  namespace: kube-system
+  labels:
+    k8s-app: fluent-bit
+data:
+  # Configuration files: server, input, filters and output
+  # ======================================================
+  env.conf: |
+    @SET K8S_SYSTEM_NM=k8s
+    @SET K8S_HOST_NM=k8s_host
+    @SET K8S_IP_NM=123.23.122.256
+    @SET K8S_LOG_CATEGORY=k8s
+    @SET K8S_LOG_PATH=/factal/logs/k8s_system_logs.txt
+    @SET K8S_TAG=k8s
+
+    @SET SYSTEM_NM=kafka
+    @SET HOST_NM=kafka_host
+    @SET IP_NM=123.23.122.256
+    @SET LOG_CATEGORY=kafka
+    @SET LOG_PATH=/factal/logs/kafka_logs.txt
+    @SET KFK_TAG=kfk
+  fluent-bit.conf: |
+    @SET K8S_SYSTEM_NM=k8s
+    @SET K8S_HOST_NM=k8s_host
+    @SET K8S_IP_NM=123.23.122.256
+    @SET K8S_LOG_CATEGORY=k8s
+    @SET K8S_LOG_PATH=/factal/logs/k8s_system_logs.txt
+    @SET K8S_TAG=k8s
+
+    @SET SYSTEM_NM=kafka
+    @SET HOST_NM=kafka_host
+    @SET IP_NM=123.23.122.256
+    @SET LOG_CATEGORY=kafka
+    @SET LOG_PATH=/factal/logs/kafka_logs.txt
+    @SET KFK_TAG=kfk
+
+    [SERVICE]
+        Flush   1
+        Daemon  off
+        Log_Level   debug
+        Parsers_File parsers.conf
+
+    @INCLUDE input.conf
+    @INCLUDE filter.conf
+    @INCLUDE filter-com.conf
+    @INCLUDE output.conf
+
+  input.conf: |
+    [INPUT]
+        Name tail
+        Path  ${K8S_LOG_PATH}
+        read_from_head   true
+        Tag ${K8S_TAG}
+        multiline.parser k8s-multiline-regex-test
+
+    [INPUT]
+        Name tail
+        Path  ${LOG_PATH}
+        read_from_head   true
+        Tag ${KFK_TAG}
+        multiline.parser kfk-multiline-regex-test
+
+  filter.conf: |
+    [FILTER]
+        Name  modify
+        Match ${K8S_TAG}
+        ADD lo04 ${K8S_SYSTEM_NM} 
+        ADD lo05 ${K8S_HOST_NM} 
+        ADD lo06 ${K8S_IP_NM} 
+        ADD lo12 ${K8S_LOG_CATEGORY}
+
+    # 写入固定值
+    [FILTER]
+        Name  modify
+        Match ${KFK_TAG}
+        ADD lo04 ${SYSTEM_NM} 
+        ADD lo05 ${HOST_NM} 
+        ADD lo06 ${IP_NM} 
+        ADD lo12 ${LOG_CATEGORY}
+
+  filter-com.conf: |
+    [FILTER]
+        Name    modify
+        Condition Key_value_matches log (ERROR\s{1,})
+        Add  lo14 Yes
+
+    [FILTER]
+        Name    modify
+        Condition Key_value_does_not_match log (ERROR\s{1,})
+        Add  lo14 No
+
+    [FILTER]
+        Name    lua
+        script  factual.lua
+        call    getLogType
+
+    [FILTER]
+        Name    lua
+        script  factual.lua
+        call    getUpdateTime
+
+  output.conf: |
+    [OUTPUT]
+        Name          forward
+        Match         *
+        Host          ${FLUENTD_SERVER_HOST}
+        Port          ${FLUENTD_SERVER_PORT}
+        
+  parsers.conf: |
+    [MULTILINE_PARSER]
+        name          multiline-regex-1
+        type          regex
+        flush_timeout 1000
+        rule      "start_state"   "/^([0-9-]+ [:0-9]+\s{1,})/"                        "cont"
+        rule      "cont"           "^(^((?!([0-9-]+ [:0-9]+\s{1,})).)*$)"              "cont"
+
+
+    [MULTILINE_PARSER]
+        name         multiline-regex-2
+        type          regex
+        flush_timeout 1000
+        rule      "start_state"   "/^([0-9-]+ [:0-9]+\s{1,})/"                        "cont"
+        rule      "cont"           "^(^((?!([0-9-]+ [:0-9]+\s{1,})).)*$)"              "cont"
+  
+  factual.lua:  |
+    function getLogType(tag, timestamp, record) 
+        newRecord = record
+        if string.match(record["log"], "ERROR") ~= nil then
+            newRecord["lo11"] = string.match(record["log"], "ERROR")
+        elseif string.match(record["log"], "WARN") ~= nil then
+            newRecord["lo11"] = string.match(record["log"], "WARN")
+        elseif string.match(record["log"], "INFO") ~= nil then
+            newRecord["lo11"] = string.match(record["log"], "INFO")
+        elseif string.match(record["log"], "DEBUG") ~= nil then
+            newRecord["lo11"] = string.match(record["log"], "DEBUG")
+        end
+        return 1, timestamp, newRecord
+    end
+
+    function getUpdateTime(tag, timestamp, record) 
+        newRecord = record
+        if string.match(record["log"], "([0-9-]+ [:0-9.]+)") ~= nil then
+            newRecord["lo07"] = string.match(record["log"], "([0-9-]+ [:0-9.]+)")
+            return 1, timestamp, newRecord
+        else
+            newRecord["lo07"] = 'None'
+            return 1, timestamp, newRecord
+        end
+    end
+

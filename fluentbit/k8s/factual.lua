@@ -19,7 +19,6 @@ function getUpdateTime(tag, timestamp, record)
         newRecord["lo07"] = string.match(record["log"], "([0-9-]+ [:0-9.]+)")
         return 1, timestamp, newRecord
     else
-        newRecord["lo07"] = 'None'
         return 1, timestamp, newRecord
     end
 end
